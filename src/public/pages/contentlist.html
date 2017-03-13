@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>文章详细页--</title>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+    .nav-container{
+      margin: 10px 0;
+    }
+    </style>
+  </head>
+  <body>
+    <!-- 页面容器 -->
+    <div class="container">
+      <!-- 导航部分 -->
+      <div class="row nav-container">
+        <div class="nav-container col-md-12">
+          <ul class="nav nav-pills" id="navTabs">
+            <li role="presentation" class="active"><a href="#home">首页</a></li>
+            <li role="presentation"><a href="#articles">文章</a></li>
+            <li role="presentation"><a href="#notes">公告</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- 页面详细内容部分 -->
+      <div class="row main-content">
+        <div class="col-md-10">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">基于ES6构建的前端项目1</h3>
+            </div>
+            <div class="panel-body">
+              ow! 看到这个 for…of 是否有种兴奋的感觉？虽然说创建 fibo 的时候稍微有点麻烦……
+              不如我们先来看看这个 fibo 究竟是怎么定义出来了。首先，我们要了解到 JavaScript 引擎(或编译器)在处理 for...of 的时候，会从 of 后的对象取得 Symbol.iterator 这属性键的值，为一个函数。它要求要返回一个包含 next 方法的对象，用于不断迭代。而因为 Symbol.iterator 所在键值对的值是一个函数，这就让我们有了自由发挥的空间，比如定义局部变量等等。
+              每当 for...of 进行了一次循环，都会执行一次该对象的 next 方法，已得到下一个值，并检查是否迭代完成。随著 ES7 的开发，for...of 所能发挥的潜能将会越来越强。
+              还有更多的 Symbol 黑科技等待挖掘，再次本文不作详细阐述，如有兴趣，可以看看 Mozilla Developer Center 上的介绍。
+              Proxy(代理
+              Proxy 是 ECMAScript 中的一种新概念，它有很多好玩的用途，从基本的作用说就是：Proxy 可以在不入侵目标对象的情况下，对逻辑行为进行拦截和处理。
+              比如说我想记录下我代码中某些接口的使用情况，以供数据分析所用，但是因为目标代码中是严格控制的，所以不能对其进行修改，而另外写一个对象来对目标对象做代理也很麻烦。那么 Proxy 便可以提供一种比较简单的方法来实现这一需求。
+              假设我要对 api 这一对象进行拦截并记录下代码行为，我就可以这样做：
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Notes</h3>
+            </div>
+            <div class="panel-body">
+              公告详细内容-1
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script>
+    window.onload = function(){
+      $('#navTabs a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+      })
+    };
+    </script>
+  </body>
+</html>

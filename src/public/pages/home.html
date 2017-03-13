@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>首页</title>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+    .nav-container{
+      margin: 10px 0;
+    }
+    </style>
+  </head>
+  <body>
+    <!-- 页面容器 -->
+    <div class="container">
+      <!-- 导航部分 -->
+      <div class="row nav-container">
+        <div class="nav-container col-md-12">
+          <ul class="nav nav-pills" id="navTabs">
+            <li role="presentation" class="active"><a href="#home">首页</a></li>
+            <li role="presentation"><a href="#articles">文章</a></li>
+            <li role="presentation"><a href="#notes">公告</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- 页面详细内容部分 -->
+      <div class="row">
+        <div class="col-md-10 content-list-box">
+          <div class="jumbotron">
+            <h1>基于ES6构建的前端项目1</h1>
+            <p>使用ES6+vue+node构建前端项目...</p>
+            <p><a class="btn btn-lg" href="#" role="button">Learn more</a></p>
+          </div>
+          <div class="jumbotron">
+            <h1>基于ES6构建的前端项目2</h1>
+            <p>使用ES6+vue+node构建前端项目...</p>
+            <p><a class="btn btn-lg" href="#" role="button">Learn more</a></p>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Notes</h3>
+            </div>
+            <div class="panel-body">
+              公告详细内容-1
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script>
+    window.onload = function(){
+      $('#navTabs a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+      })
+    };
+    </script>
+  </body>
+</html>
